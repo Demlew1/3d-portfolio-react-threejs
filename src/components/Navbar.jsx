@@ -9,7 +9,7 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} bg-zinc-800 w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[linear-gradient(to_bottom,rgba(9,9,11,0.9)_0%,rgba(9,9,11,0.7)_100%)] backdrop-blur-sm border-b border-yellow-900/20`}
     >
       <div className="w-full flex justify-between items-center max-2-7xl mx-auto">
         <Link
