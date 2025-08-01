@@ -3,7 +3,7 @@ import { styles } from "../styles";
 import ComputerCanvas from "./canvas/Computers";
 function Hero() {
   return (
-    <section className="relative w-full h-screen bg-zinc-950 mx-auto">
+    <section className="relative w-full flex flex-row h-screen bg-zinc-950 mx-auto">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
