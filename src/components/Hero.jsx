@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputerCanvas } from "./canvas";
+import ComputerCanvas from "./canvas/Computers";
 function Hero() {
   return (
     <section className="relative w-full h-screen bg-zinc-950 mx-auto">
