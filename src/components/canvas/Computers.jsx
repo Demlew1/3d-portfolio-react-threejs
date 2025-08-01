@@ -1,23 +1,22 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-// import CanvasLoader from "../Loader"; // Uncomment if it's 3D-compatible
+import CanvasLoader from "../Loader";
 
 function Computers() {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.25} groundColor="black" />
-      <pointLight
+      <hemisphereLight intensity={2} groundColor="black" />
+      <pointLight intensity={1} distance={11} />
+      <spotLight
         position={[5, -1, 3]}
         intensity={600}
-        penumbra={1}
-        distance={11}
         angle={0}
-        color="#f59e0b"
         decay={2}
         castShadow
+        shadow-mapSize={1024}
       />
       <primitive
         object={computer.scene}
@@ -37,7 +36,7 @@ const ComputerCanvas = () => {
       camera={{ position: [10, 3, 10], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
