@@ -19,7 +19,7 @@ export default function Navbar() {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="size-9 h-9 object-contain" />
+          <img src={logo} alt="logo" className=" size-16 rounded-full " />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Demtse
             <span className="sm:block hidden">| Front-end Developer</span>
