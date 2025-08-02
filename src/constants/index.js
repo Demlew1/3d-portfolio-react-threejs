@@ -1,5 +1,4 @@
 import {
-  web,
   javascript,
   typescript,
   html,
@@ -7,7 +6,6 @@ import {
   reactjs,
   redux,
   tailwind,
-  mongodb,
   git,
   figma,
   carrent,
@@ -32,8 +30,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Javascript",
+    icon: javascript,
+  },
+  {
+    title: "Typescript",
+    icon: typescript,
+  },
+  {
+    title: "Reactjs",
+    icon: reactjs,
+  },
+  {
+    title: "tailwindcss",
+    icon: tailwind,
   },
 ];
 
@@ -65,10 +75,6 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
   },
 
   {

@@ -1,8 +1,11 @@
-// import Tilt from "react-tilt";
+import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+function ServiceCard({ index, title, icon }) {
+  return <Tilt className="xs:w-[]">{title}</Tilt>;
+}
 function About() {
   return (
     <>
@@ -21,7 +24,11 @@ function About() {
         actually solve problems. <br /> Let’s team up and turn your ideas into
         reality!
       </motion.p>
-      <div></div>
+      <div className="mt-20 flex flex-wrap gap-10">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
     </>
   );
 }
