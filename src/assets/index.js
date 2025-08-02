@@ -2,6 +2,10 @@ import logo from "./logo.jpg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import alx from "./alx.png";
+import gdg from "./gdg.png";
+import jonasJ from "./jonasJ.jpg";
+import jonasH from "./jonasH.jpg";
 
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
@@ -24,6 +28,10 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  jonasJ,
+  jonasH,
+  gdg,
+  alx,
   logo,
   github,
   menu,

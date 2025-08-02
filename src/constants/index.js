@@ -1,4 +1,8 @@
 import {
+  jonasJ,
+  jonasH,
+  alx,
+  gdg,
   javascript,
   typescript,
   html,
@@ -84,6 +88,37 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
+  },
+];
+const certificates = [
+  {
+    name: "ALX front-end certificate",
+    description:
+      "After 9 month Journey I successfully finished the capstone project and the milestones",
+    image: alx,
+  },
+  {
+    name: "GDG AASTU",
+    description:
+      "I successfully finished front-end development after 6 month dedication and worked on capstone project",
+    image: gdg,
+  },
+  {
+    name: "GDG AASTU",
+    description:
+      "I successfully finished front-end development after 6 month dedication and worked on capstone project",
+    image: gdg,
+  },
+  {
+    name: "Jonas javascript course",
+    description:
+      "I have Finished Jonas's course that takes about 68.5 hour. He was the best javascript teacher and thought me a lot of skills. ",
+    image: jonasJ,
+  },
+  {
+    name: "Jonas Html/Css course",
+    description: "Also Learned Jonas's HTML and CSS course.",
+    image: jonasH,
   },
 ];
 
