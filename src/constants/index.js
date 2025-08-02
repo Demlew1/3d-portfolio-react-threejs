@@ -103,12 +103,7 @@ const certificates = [
       "I successfully finished front-end development after 6 month dedication and worked on capstone project",
     image: gdg,
   },
-  {
-    name: "GDG AASTU",
-    description:
-      "I successfully finished front-end development after 6 month dedication and worked on capstone project",
-    image: gdg,
-  },
+
   {
     name: "Jonas javascript course",
     description:
@@ -188,4 +183,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, projects };
+export { certificates, services, technologies, projects };
