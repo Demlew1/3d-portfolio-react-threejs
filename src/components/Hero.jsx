@@ -18,7 +18,7 @@ function Hero() {
               Hi , I'm <span className="text-yellow-900">Demtse</span>
             </h1>
             <p
-              className={`font-['Kanit'] text-[12px] sm:text-sm text-yellow-50 mt-2 text-white-200`}
+              className={`font-['Kanit'] text-[14px] sm:text-lg text-yellow-50 mt-2 text-white-200`}
             >
               I'm web developer with a strong focus on <br />
               building responsive, user-friendly interfaces
