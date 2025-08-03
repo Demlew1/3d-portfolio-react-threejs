@@ -49,39 +49,17 @@ const ComputerCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
-  // Handle touch events to prevent scroll interference
-  const handleTouchStart = (e) => {
-    if (isMobile) {
-      e.stopPropagation();
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    if (isMobile) {
-      // Allow vertical scrolling but prevent horizontal gestures
-      const touch = e.touches[0];
-      const deltaX = Math.abs(touch.clientX - (touch.clientX || 0));
-      const deltaY = Math.abs(touch.clientY - (touch.clientY || 0));
-
-      if (deltaX > deltaY) {
-        e.preventDefault();
-      }
-    }
-  };
-
   return (
-    <div
-      className="w-full h-full"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      style={{ touchAction: isMobile ? "pan-y" : "auto" }}
-    >
+    <div className="w-full h-full">
       <Canvas
         frameLoop="demand"
         shadows
         camera={{ position: [10, 3, 10], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
-        style={{ touchAction: isMobile ? "pan-y" : "auto" }}
+        style={{
+          touchAction: isMobile ? "pan-y" : "auto",
+          pointerEvents: isMobile ? "none" : "auto",
+        }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls

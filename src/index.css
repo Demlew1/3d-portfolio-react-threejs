@@ -15,12 +15,7 @@ body {
 
 /* Fix for 3D canvas on mobile */
 @media (max-width: 600px) {
-  /* Allow vertical scrolling but prevent horizontal touch gestures on canvas */
-  canvas {
-    touch-action: pan-y !important;
-  }
-
-  /* Ensure body allows vertical scrolling */
+  /* Allow normal scrolling on mobile */
   body {
     touch-action: pan-y;
     overflow-x: hidden;
