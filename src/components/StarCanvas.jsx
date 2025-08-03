@@ -1,7 +1,37 @@
 import { useState, useRef, Suspense } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as random from "math/random/dist/math-random.esm";
 
+function Stars(props) {
+  const ref = useRef();
+  const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+  return (
+    <group rotation>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+        <PointMaterial
+          transparent
+          color="#a86832"
+          size={0.002}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+    </group>
+  );
+}
 function StarCanvas() {
-  return <div>star canvas</div>;
+  return (
+    <div>
+      <div className="w-full h-full absolute inset-0 z-[-1]">
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <Suspense fallback={null}>
+            <Stars />
+          </Suspense>
+        </Canvas>
+      </div>
+    </div>
+  );
 }
 
 export default StarCanvas;
