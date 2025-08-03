@@ -13,7 +13,56 @@ function Contact() {
     message: "",
   });
   const [Loading, setLoading] = useState(false);
-  return <div>contact us</div>;
+  return (
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 0.1)}
+        className="flex-[0.75] bg-gray-100 p-8 rounded-2xl"
+      >
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="mt-12 flex flex-col gap-8"
+        >
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="What is your name?"
+              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="your email"
+              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows="7"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="any message for me?"
+              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+        </form>
+      </motion.div>
+    </div>
+  );
 }
 
 export default Contact;
