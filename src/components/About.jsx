@@ -46,7 +46,7 @@ function About() {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className="mt-20 ml-10 text-4xl font-['Rubik'] font-bold text-zinc-50">
+        <p className=" ml-10 text-4xl font-['Rubik'] font-bold text-zinc-50">
           About me
         </p>
       </motion.div>

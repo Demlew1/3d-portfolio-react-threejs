@@ -23,12 +23,20 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "certificates",
+    title: "certificates",
+  },
+  {
+    id: "tech",
+    title: "Tech",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "contact",
   },
 ];
 
@@ -129,7 +137,11 @@ const projects = [
       },
 
       {
-        name: "tailwind",
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "restapi",
         color: "pink-text-gradient",
       },
       {
