@@ -1,80 +1,68 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { slideIn } from "../utils/motion";
-
-function Contact() {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [Loading, setLoading] = useState(false);
+import EarthCanvas from "./canvas/Earth";
+import { FaGithub, FaTelegram, FaEnvelope, FaPhone } from "react-icons/fa";
+const contacts = [
+  {
+    platform: "GitHub",
+    value: "github.com/demlew1",
+    link: "https://github.com/demlew1",
+    icon: <FaGithub className="text-2xl" />,
+  },
+  {
+    platform: "Telegram",
+    value: "@yourusername",
+    link: "https://t.me/sevsni",
+    icon: <FaTelegram className="text-2xl" />,
+  },
+  {
+    platform: "Email",
+    value: "demtse.@email.com",
+    link: "mailto:your@email.com",
+    icon: <FaEnvelope className="text-2xl" />,
+  },
+  {
+    platform: "Phone",
+    value: "+251983334785",
+    link: "tel:+251983334785",
+    icon: <FaPhone className="text-2xl" />,
+  },
+];
+const Contact = () => {
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 0.1)}
-        className="flex-[0.75] bg-gray-100 p-8 rounded-2xl"
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact</h3>
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What is your name?"
-              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="your email"
-              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows="7"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="any message for me?"
-              className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <button
-            type="submit"
-            className="py-3 px-8 outlinde-none w-fit text-white font-bold shadow-md rounded-xl"
-          >
-            {loading ? "sending" : send}
-          </button>
-        </form>
-      </motion.div>
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 0.1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
+    <div className="xl:mt-12 flex flex-col-reverse xl:flex-row gap-10 font-['Rubik']">
+      <div className="flex-[0.75] bg-zinc-900 p-8 rounded-2xl border border-zinc-800 shadow-lg">
+        <p className="text-yellow-400 font-medium mb-2">Get in touch</p>
+        <h3 className="text-3xl font-bold text-white mb-6 font-['Kanit']">
+          Contact Me
+        </h3>
+
+        <div className="space-y-6">
+          {contacts.map((contact) => (
+            <div
+              key={contact.platform}
+              className="flex items-center gap-4 hover:bg-zinc-800/50 p-3 rounded-lg transition-colors"
+            >
+              <span className="text-yellow-400">{contact.icon}</span>
+              <div>
+                <p className="text-zinc-300 font-medium">{contact.platform}</p>
+                <a
+                  href={contact.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-yellow-400 transition-colors flex items-center gap-1"
+                >
+                  {contact.value}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas />
-      </motion.div>
+      </div>
     </div>
   );
-}
+};
 
 export default Contact;

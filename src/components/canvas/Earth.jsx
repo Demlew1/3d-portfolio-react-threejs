@@ -1,3 +1,3 @@
-export default function Earth() {
+export default function EarthCanvas() {
   return <div>Earth</div>;
 }
