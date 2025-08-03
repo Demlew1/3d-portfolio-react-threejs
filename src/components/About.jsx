@@ -58,7 +58,6 @@ function About() {
         >
           <div className="relative group">
             <div className="absolute -inset-3 border-2 border-amber-400/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
             <div className="relative overflow-hidden rounded-lg border border-zinc-700/50 shadow-xl">
               <motion.img
                 src={portpic}
@@ -67,15 +66,12 @@ function About() {
                 initial={{ opacity: 0.9 }}
                 whileInView={{ opacity: 1 }}
               />
-
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-900/20 pointer-events-none"></div>
             </div>
-
             <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-amber-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-pink-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         </motion.div>
-
         <div className="flex-1">
           <motion.p
             className="text-gray-100 font-['Kanit'] text-lg mb-10 max-w-2xl leading-relaxed"
@@ -87,7 +83,7 @@ function About() {
             solve problems. Let's team up and turn your ideas into reality.
           </motion.p>
 
-          <div className="flex flex-row flex-wrap gap-10">
+          <div className="flex flex-row flex-wrap justify-center gap-10">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}

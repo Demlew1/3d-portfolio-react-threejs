@@ -9,7 +9,7 @@ const contacts = [
   },
   {
     platform: "Telegram",
-    value: "@yourusername",
+    value: "@sevsni",
     link: "https://t.me/sevsni",
     icon: <FaTelegram className="text-2xl" />,
   },

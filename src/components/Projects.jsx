@@ -19,7 +19,7 @@ const cardVariants = {
 };
 const Projects = () => {
   return (
-    <section className="relative py-20 bg-zinc-950 font-['Rubik']">
+    <section className="relative  bg-zinc-950 font-['Rubik']">
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-yellow-900/20 blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-zinc-800/30 blur-3xl"></div>

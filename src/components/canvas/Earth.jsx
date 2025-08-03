@@ -5,10 +5,17 @@ import CanvasLoader from "../Loader";
 
 function Earth() {
   const earth = useGLTF("/planet/scene.gltf");
+
+  // Add error handling for the model
+  if (!earth || !earth.scene) {
+    return null;
+  }
+
   return (
     <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 }
+
 export default function EarthCanvas() {
   return (
     <Canvas

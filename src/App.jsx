@@ -19,19 +19,19 @@ export default function App() {
           <Navbar />
           <Hero />
         </div>
-        <section id="about">
+        <section id="about" className="pt-20">
           <About />
         </section>
-        <section id="certificates">
+        <section id="certificates" className="pt-20">
           <Certificates />
         </section>
-        <section id="tech">
+        <section id="tech" className="pt-20">
           <Tech />
         </section>
-        <section id="projects">
+        <section id="projects" className="pt-20">
           <Projects />
         </section>
-        <section id="contact" className="relative z-0">
+        <section id="contact" className="relative z-0 pt-20">
           <Contact />
           <StarCanvas />
         </section>
