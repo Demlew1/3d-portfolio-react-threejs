@@ -175,7 +175,7 @@ const projects = [
       },
     ],
     image: movie,
-    source_code_link: "https://github.com/Demlew1/Demzon-Ecommerce",
+    source_code_link: "https://github.com/Demlew1/The-Movie-Database",
   },
   {
     name: "Demzon",
@@ -196,7 +196,7 @@ const projects = [
       },
     ],
     image: demzon,
-    source_code_link: "https://github.com/Demlew1/The-Movie-Database",
+    source_code_link: "https://github.com/Demlew1/Demzon-Ecommerce",
   },
 ];
 
