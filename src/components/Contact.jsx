@@ -59,7 +59,19 @@ function Contact() {
               className="py-4 px-6 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+          <button
+            type="submit"
+            className="py-3 px-8 outlinde-none w-fit text-white font-bold shadow-md rounded-xl"
+          >
+            {loading ? "sending" : send}
+          </button>
         </form>
+      </motion.div>
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 0.1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   );
