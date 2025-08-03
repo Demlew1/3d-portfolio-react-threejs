@@ -12,9 +12,9 @@ import {
   tailwind,
   git,
   figma,
-  carrent,
-  jobit,
-  tripguide,
+  movie,
+  demzon,
+  demlew,
 } from "../assets";
 
 export const navLinks = [
@@ -73,7 +73,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Zustand",
     icon: redux,
   },
   {
@@ -119,30 +119,31 @@ const certificates = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Demlew Ecommerce",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows authenticated users to search, filter,post and like products, providing a convenient and efficient solution for E-commerce needs.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
+
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: demlew,
+    source_code_link: "https://github.com/Demlew1/Demlew-Ecommerce",
   },
   {
-    name: "Job IT",
+    name: "Movie-Database",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables an authenticated users to search for movies, add to watchlist, and rate watchlisted movies.",
     tags: [
       {
         name: "react",
@@ -153,33 +154,37 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
         name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: movie,
+    source_code_link: "https://github.com/Demlew1/Demzon-Ecommerce",
+  },
+  {
+    name: "Demzon",
+    description:
+      "A comprehensive e-commerce platform that allows users to add products to cart, and add products to favourite page and offers search and filter functionality.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: demzon,
+    source_code_link: "https://github.com/Demlew1/The-Movie-Database",
   },
 ];
 

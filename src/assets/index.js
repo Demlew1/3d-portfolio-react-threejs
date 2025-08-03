@@ -23,9 +23,9 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import movie from "./movie.png";
+import demzon from "./demzon.png";
+import demlew from "./demlew.png";
 
 export {
   jonasJ,
@@ -50,7 +50,7 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
+  movie,
+  demlew,
+  demzon,
 };

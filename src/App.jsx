@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar";
 import Tech from "./components/Tech";
 import StarCanvas from "./components/StarCanvas";
 import { BrowserRouter } from "react-router-dom";
-import Certificates from "./components/certificates";
+import Certificates from "./components/Certificates";
+import Projects from "./components/Projects";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,7 @@ export default function App() {
         <About />
         <Certificates />
         <Tech />
+        <Projects />
         <div className="relative z-0">
           <Contact />
           <StarCanvas />
