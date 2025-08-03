@@ -13,18 +13,30 @@ function Computers({ isMobile }) {
     return null;
   }
 
+  // Check if the model has valid geometry
+  try {
+    if (computer.scene.children.length === 0) {
+      return null;
+    }
+  } catch (error) {
+    console.warn("Error loading computer model:", error);
+    return null;
+  }
+
   return (
     <mesh>
-      <hemisphereLight intensity={2} groundColor="#fbbf24" />
-      <pointLight intensity={1} distance={11} />
-      <spotLight
-        position={[5, -1, 3]}
-        intensity={600}
-        angle={0}
-        decay={2}
-        castShadow
-        shadow-mapSize={1024}
-      />
+      <hemisphereLight intensity={isMobile ? 1 : 2} groundColor="#fbbf24" />
+      <pointLight intensity={isMobile ? 0.5 : 1} distance={11} />
+      {!isMobile && (
+        <spotLight
+          position={[5, -1, 3]}
+          intensity={600}
+          angle={0}
+          decay={2}
+          castShadow
+          shadow-mapSize={1024}
+        />
+      )}
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.25 : 0.45}
@@ -37,6 +49,7 @@ function Computers({ isMobile }) {
 
 const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [modelError, setModelError] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 600px)");
@@ -49,17 +62,35 @@ const ComputerCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
+  // Fallback for mobile if 3D causes issues
+  if (isMobile && modelError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
+        <div className="text-center">
+          <div className="text-6xl mb-4">💻</div>
+          <p className="text-white text-lg">3D Computer Model</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full h-full">
       <Canvas
-        frameLoop="demand"
-        shadows
+        frameLoop={isMobile ? "never" : "demand"}
+        shadows={!isMobile}
         camera={{ position: [10, 3, 10], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}
+        gl={{
+          preserveDrawingBuffer: true,
+          antialias: !isMobile,
+          powerPreference: "high-performance",
+        }}
         style={{
           touchAction: isMobile ? "pan-y" : "auto",
           pointerEvents: isMobile ? "none" : "auto",
         }}
+        dpr={isMobile ? 1 : window.devicePixelRatio}
+        onError={() => setModelError(true)}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
@@ -75,7 +106,7 @@ const ComputerCanvas = () => {
           />
           <Computers isMobile={isMobile} />
         </Suspense>
-        <Preload all />
+        {!isMobile && <Preload all />}
       </Canvas>
     </div>
   );
