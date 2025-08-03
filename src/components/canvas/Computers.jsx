@@ -7,13 +7,9 @@ import { useState } from "react";
 
 function Computers({ isMobile }) {
   const computer = useGLTF("/desktop_pc/scene.gltf");
-
-  // Add error handling for the model
   if (!computer || !computer.scene) {
     return null;
   }
-
-  // Check if the model has valid geometry
   try {
     if (computer.scene.children.length === 0) {
       return null;
@@ -22,7 +18,6 @@ function Computers({ isMobile }) {
     console.warn("Error loading computer model:", error);
     return null;
   }
-
   return (
     <mesh>
       <hemisphereLight intensity={isMobile ? 1 : 2} groundColor="#fbbf24" />
@@ -46,10 +41,8 @@ function Computers({ isMobile }) {
     </mesh>
   );
 }
-
 const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [modelError, setModelError] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 600px)");
@@ -62,51 +55,45 @@ const ComputerCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
-  // Fallback for mobile if 3D causes issues
-  if (isMobile && modelError) {
+  if (isMobile) {
     return (
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
-        <div className="text-center">
+      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br mt-16">
+        <div className="text-center px-4">
           <div className="text-6xl mb-4">💻</div>
-          <p className="text-white text-lg">3D Computer Model</p>
+          <p className="text-white text-lg font-['Rubik'] mb-2">
+            Interactive Portfolio
+          </p>
+          <p className="text-yellow-400 font-['Kanit'] text-sm">
+            (View on desktop for 3D experience)
+          </p>
         </div>
       </div>
     );
   }
-
   return (
     <div className="w-full h-full">
       <Canvas
-        frameLoop={isMobile ? "never" : "demand"}
-        shadows={!isMobile}
+        frameLoop="demand"
+        shadows
         camera={{ position: [10, 3, 10], fov: 25 }}
         gl={{
           preserveDrawingBuffer: true,
-          antialias: !isMobile,
+          antialias: true,
           powerPreference: "high-performance",
         }}
-        style={{
-          touchAction: isMobile ? "pan-y" : "auto",
-          pointerEvents: isMobile ? "none" : "auto",
-        }}
-        dpr={isMobile ? 1 : window.devicePixelRatio}
-        onError={() => setModelError(true)}
+        dpr={window.devicePixelRatio}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
-            enablePan={!isMobile}
-            enableRotate={!isMobile}
+            enablePan={true}
+            enableRotate={true}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
-            touches={{
-              ONE: isMobile ? "NONE" : "ROTATE",
-              TWO: isMobile ? "NONE" : "DOLLY",
-            }}
           />
           <Computers isMobile={isMobile} />
         </Suspense>
-        {!isMobile && <Preload all />}
+        <Preload all />
       </Canvas>
     </div>
   );

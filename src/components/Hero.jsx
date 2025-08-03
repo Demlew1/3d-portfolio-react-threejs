@@ -1,8 +1,9 @@
 import { styles } from "../styles";
 import ComputerCanvas from "./canvas/Computers";
+
 function Hero() {
   return (
-    <section className="relative w-full flex flex-col h-screen  bg- mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -12,22 +13,20 @@ function Hero() {
             <div className="w-1 h-30 bg-[linear-gradient(to_bottom,theme(colors.yellow.600)_0px,theme(colors.yellow.600)_25px,transparent_100%)]" />
           </div>
           <div>
-            <h1
-              className={`sm:text-5xl text-3xl font-bold font-['Rubik'] text-white `}
-            >
-              Hi , I'm <span className="text-yellow-900">Demtse</span>
+            <h1 className="sm:text-5xl text-4xl font-bold font-['Rubik'] text-white">
+              Hi, I'm <span className="text-yellow-900">Demtse</span>
             </h1>
-            <p
-              className={`font-['Kanit'] text-[14px] sm:text-lg text-yellow-50 mt-2 text-white-200`}
-            >
-              I'm web developer with a strong focus on <br />
-              building responsive, user-friendly interfaces
-              <br /> using modern web technologies.
+            <p className="font-['Kanit'] text-base sm:text-lg text-yellow-50 mt-2">
+              I'm a web developer specializing in responsive, user-friendly
+              interfaces <br /> built with modern web technologies.
             </p>
           </div>
         </div>
       </div>
       <ComputerCanvas />
+      <div className="sm:hidden absolute bottom-10 w-full flex justify-center">
+        <div className="animate-bounce text-white text-2xl">↓</div>
+      </div>
     </section>
   );
 }
