@@ -12,3 +12,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Fix for 3D canvas on mobile */
+@media (max-width: 600px) {
+  /* Allow vertical scrolling but prevent horizontal touch gestures on canvas */
+  canvas {
+    touch-action: pan-y !important;
+  }
+
+  /* Ensure body allows vertical scrolling */
+  body {
+    touch-action: pan-y;
+    overflow-x: hidden;
+  }
+}

@@ -49,23 +49,57 @@ const ComputerCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
+  // Handle touch events to prevent scroll interference
+  const handleTouchStart = (e) => {
+    if (isMobile) {
+      e.stopPropagation();
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (isMobile) {
+      // Allow vertical scrolling but prevent horizontal gestures
+      const touch = e.touches[0];
+      const deltaX = Math.abs(touch.clientX - (touch.clientX || 0));
+      const deltaY = Math.abs(touch.clientY - (touch.clientY || 0));
+
+      if (deltaX > deltaY) {
+        e.preventDefault();
+      }
+    }
+  };
+
   return (
-    <Canvas
-      frameLoop="demand"
-      shadows
-      camera={{ position: [10, 3, 10], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+    <div
+      className="w-full h-full"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      style={{ touchAction: isMobile ? "pan-y" : "auto" }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+      <Canvas
+        frameLoop="demand"
+        shadows
+        camera={{ position: [10, 3, 10], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+        style={{ touchAction: isMobile ? "pan-y" : "auto" }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            enablePan={!isMobile}
+            enableRotate={!isMobile}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            touches={{
+              ONE: isMobile ? "NONE" : "ROTATE",
+              TWO: isMobile ? "NONE" : "DOLLY",
+            }}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 
