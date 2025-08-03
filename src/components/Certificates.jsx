@@ -62,7 +62,7 @@ function Certificates() {
 
       <motion.div variants={textVariant()} className="mb-16 text-center">
         <h2 className={`${styles.sectionHeadText} font-['Kanit'] mt-14`}>
-          Certificates.
+          Certificates
         </h2>
       </motion.div>
       <div className="relative mx-auto max-w-6xl px-4">

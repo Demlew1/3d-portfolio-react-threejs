@@ -94,7 +94,7 @@ const certificates = [
   {
     name: "ALX front-end certificate",
     description:
-      "After 9 month Journey I successfully finished the capstone project and the milestones",
+      "After 4 month Journey I successfully finished the capstone project and the milestones",
     image: alx,
   },
   {
