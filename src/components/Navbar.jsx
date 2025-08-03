@@ -13,8 +13,8 @@ export default function Navbar() {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[linear-gradient(to_bottom,rgba(9,9,11,0.9)_0%,rgba(9,9,11,0.7)_100%)] backdrop-blur-sm border-b border-yellow-900/20`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <a
-          href="#hero"
+        <Link
+          to="/"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
@@ -30,7 +30,7 @@ export default function Navbar() {
             Demtse
             <span className="sm:block hidden"> | Front-end Developer</span>
           </p>
-        </a>
+        </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li

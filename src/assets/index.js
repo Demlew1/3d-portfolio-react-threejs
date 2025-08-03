@@ -1,5 +1,4 @@
 import logo from "./logo.jpg";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import alx from "./alx.png";
@@ -16,7 +15,6 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.svg";
-import threejs from "./tech/threejs.svg";
 
 import movie from "./movie.png";
 import demzon from "./demzon.png";
@@ -28,7 +26,6 @@ export {
   gdg,
   alx,
   logo,
-  github,
   menu,
   close,
   css,
@@ -40,7 +37,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   movie,
   demlew,
   demzon,

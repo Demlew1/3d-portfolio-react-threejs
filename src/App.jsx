@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,7 +10,7 @@ import StarCanvas from "./components/StarCanvas";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative bg-zinc-950 z-0 bg-primary scroll-smooth">
         <div
           id="hero"
@@ -36,6 +36,6 @@ export default function App() {
           <StarCanvas />
         </section>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
