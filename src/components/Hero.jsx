@@ -17,8 +17,9 @@ function Hero() {
               Hi, I'm <span className="text-yellow-900">Demtse</span>
             </h1>
             <p className="font-['Kanit'] text-base sm:text-lg text-yellow-50 mt-2">
-              I'm a web developer specializing in responsive, user-friendly
-              interfaces <br /> built with modern web technologies.
+              I'm a web developer specializing <br /> in responsive,
+              user-friendly interfaces <br /> built with modern web
+              technologies.
             </p>
           </div>
         </div>
