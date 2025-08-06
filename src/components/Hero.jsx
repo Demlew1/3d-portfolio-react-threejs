@@ -25,9 +25,6 @@ function Hero() {
         </div>
       </div>
       <ComputerCanvas />
-      <div className="sm:hidden absolute bottom-10 w-full flex justify-center">
-        <div className="animate-bounce text-white text-2xl">↓</div>
-      </div>
     </section>
   );
 }

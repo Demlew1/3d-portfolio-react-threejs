@@ -28,7 +28,7 @@ export default function Navbar() {
           />
           <p className="text-white font-['Rubik'] text-[18px] font-bold cursor-pointer">
             Demtse
-            <span className="sm:block hidden"> | Front-end Developer</span>
+            <span className="lg:block hidden"> | Front-end Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
