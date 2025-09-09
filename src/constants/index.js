@@ -7,14 +7,17 @@ import {
   typescript,
   html,
   css,
+  prof,
   reactjs,
   redux,
+  portfolio,
   tailwind,
   git,
   figma,
   movie,
   demzon,
   demlew,
+  next,
 } from "../assets";
 
 export const navLinks = [
@@ -111,12 +114,24 @@ const certificates = [
       "I successfully finished front-end development after 6 month dedication and worked on capstone project",
     image: gdg,
   },
+  {
+    name: "The Ultimate React Course 2025:React,Next.js,Redux & More",
+    description:
+      "I have Finished this course that takes about 84 hour. I learned a lot of skills about React and Next.js",
+    image: next,
+  },
 
   {
     name: "Jonas javascript course",
     description:
       "I have Finished Jonas's course that takes about 68.5 hour. He was the best javascript teacher and thought me a lot of skills. ",
     image: jonasJ,
+  },
+  {
+    name: "Alx Professional Foundation",
+    description:
+      "I have Finished Alx Professional Foundation course that takes about 2 month. I learned a lot of skills about professional life and soft skills.",
+    image: prof,
   },
   {
     name: "Jonas Html/Css course",
@@ -150,7 +165,29 @@ const projects = [
       },
     ],
     image: demlew,
-    source_code_link: "https://github.com/Demlew1/Demlew-Ecommerce",
+    source_code_link: "https://demlew-ecommerce-last.vercel.app/",
+  },
+  {
+    name: "Marketing Company Portfolio",
+    description:
+      "A responsive marketing company portfolio website built with React and Tailwind CSS, showcasing services, projects.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://zenati-creative.vercel.app/",
   },
   {
     name: "Movie-Database",

@@ -5,7 +5,9 @@ import alx from "./alx.png";
 import gdg from "./gdg.png";
 import jonasJ from "./jonasJ.jpg";
 import jonasH from "./jonasH.jpg";
-
+import next from "./next.jpg";
+import prof from "./prof.png";
+import portfolio from "./portfolio.png";
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
@@ -22,11 +24,14 @@ import demlew from "./demlew.png";
 
 export {
   jonasJ,
+  next,
   jonasH,
   gdg,
   alx,
   logo,
   menu,
+  portfolio,
+  prof,
   close,
   css,
   figma,

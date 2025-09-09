@@ -15,8 +15,8 @@ const contacts = [
   },
   {
     platform: "Email",
-    value: "demtse.@email.com",
-    link: "mailto:your@email.com",
+    value: "demtse.yibabe@email.com",
+    link: "mailto:demtse.yibabe@email.com",
     icon: <FaEnvelope className="text-2xl" />,
   },
   {

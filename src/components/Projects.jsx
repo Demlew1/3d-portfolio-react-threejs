@@ -71,7 +71,7 @@ const Projects = () => {
                 >
                   <FiGithub className="w-4 h-4 text-zinc-800 group-hover:text-zinc-900" />
                   <span className="text-xs font-medium text-zinc-800 group-hover:text-zinc-900 hidden sm:inline">
-                    Code
+                    Live
                   </span>
                 </a>
               </div>
