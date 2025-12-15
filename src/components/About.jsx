@@ -28,7 +28,7 @@ function ServiceCard({ index, title, icon }) {
             />
           </motion.div>
 
-          <h3 className="text-xl font-bold text-zinc-100 font-['Rubik'] mt-2">
+          <h3 className="text-xl font-bold text-zinc-100 font-['Poppins'] mt-2">
             {title}
             <motion.span
               initial={{ width: 0 }}
@@ -46,7 +46,7 @@ function About() {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className=" ml-10 text-4xl font-['Rubik'] font-bold text-zinc-50">
+        <p className=" ml-10 text-4xl font-['Poppins'] font-bold text-zinc-50">
           About me
         </p>
       </motion.div>
@@ -74,7 +74,7 @@ function About() {
         </motion.div>
         <div className="flex-1">
           <motion.p
-            className="text-gray-100 font-['Kanit'] text-lg mb-10 max-w-2xl leading-relaxed"
+            className="text-gray-100 font-['Poppins'] text-lg mb-10 max-w-2xl leading-relaxed"
             variants={fadeIn("", "", 0.1, 1)}
           >
             I'm a front-end developer who builds websites and apps using React,

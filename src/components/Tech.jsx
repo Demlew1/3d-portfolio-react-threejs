@@ -29,7 +29,7 @@ const item = {
 
 function Tech() {
   return (
-    <section className="relative overflow-hidden py-20 bg-zinc-950 font-['Rubik']">
+    <section className="relative overflow-hidden py-20 bg-zinc-950 font-['Poppins']">
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-zinc-800 blur-3xl"></div>
         <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-zinc-800 blur-3xl"></div>
@@ -41,7 +41,7 @@ function Tech() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-white mb-12 font-['Kanit']"
+          className="text-4xl md:text-5xl font-bold text-center text-white mb-12 font-['Poppins']"
         >
           <span className="inline-block">My Tech Stack</span>
           <span className="block mt-3 text-lg font-normal text-zinc-400">

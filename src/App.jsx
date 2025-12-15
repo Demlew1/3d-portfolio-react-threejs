@@ -11,7 +11,7 @@ import StarCanvas from "./components/StarCanvas";
 export default function App() {
   return (
     <HashRouter>
-      <div className="relative bg-zinc-950 z-0 bg-primary scroll-smooth">
+      <div className=" font-['Poppins'] relative bg-black z-0 bg-primary scroll-smooth">
         <div
           id="hero"
           className="bg-hero-pattern bg-cover bg-no-repeat bg-center"

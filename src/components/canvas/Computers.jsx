@@ -63,10 +63,10 @@ export default function ComputerCanvas() {
       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br mt-16">
         <div className="text-center px-4">
           <div className="text-6xl mb-4">💻</div>
-          <p className="text-white text-lg font-['Rubik'] mb-2">
+          <p className="text-white text-lg font-['Poppins'] mb-2">
             Interactive Portfolio
           </p>
-          <p className="text-yellow-400 font-['Kanit'] text-sm">
+          <p className="text-yellow-400 font-['Poppins'] text-sm">
             (View on desktop for 3D experience)
           </p>
         </div>

@@ -17,13 +17,14 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.svg";
-
+import ahadu from "./tech/ahadu.png"
 import movie from "./movie.png";
 import demzon from "./demzon.png";
 import demlew from "./demlew.png";
 
 export {
   jonasJ,
+  ahadu,
   next,
   jonasH,
   gdg,

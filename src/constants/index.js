@@ -12,6 +12,7 @@ import {
   redux,
   portfolio,
   tailwind,
+  ahadu,
   git,
   figma,
   movie,
@@ -141,6 +142,32 @@ const certificates = [
 ];
 
 const projects = [
+  {
+    name: "Ahadu Market",
+    description:
+      "An E-commerce site that have web scraping feature directly from amazon",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: ahadu,
+    source_code_link: "https://ahadumarket.store/",
+  },
   {
     name: "Demlew Ecommerce",
     description:

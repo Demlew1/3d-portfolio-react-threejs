@@ -28,7 +28,7 @@ const contacts = [
 ];
 const Contact = () => {
   return (
-    <div className="xl:mt-12 flex flex-col-reverse xl:flex-row gap-10 font-['Rubik']">
+    <div className="xl:mt-12 flex flex-col-reverse xl:flex-row gap-10 font-['Poppins']">
       <div className="flex-[0.75] bg-zinc-900 p-8 rounded-2xl border border-zinc-800 shadow-lg">
         <p className="text-yellow-400 font-medium mb-2">Get in touch</p>
         <h3 className="text-3xl font-bold text-white mb-6 font-['Kanit']">

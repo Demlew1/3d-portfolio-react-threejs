@@ -16,7 +16,7 @@ function Certificates() {
     document.body.style.overflow = "auto";
   };
   return (
-    <section className="relative font-['Rubik']">
+    <section className="relative font-['Poppins']">
       {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md"
@@ -41,7 +41,7 @@ function Certificates() {
         </div>
       )}
       <motion.div variants={textVariant()} className="mb-16 text-center">
-        <h2 className={`${styles.sectionHeadText} font-['Kanit'] mt-14`}>
+        <h2 className={`${styles.sectionHeadText} font-['Poppins'] mt-14`}>
           Certificates
         </h2>
       </motion.div>
@@ -52,9 +52,8 @@ function Certificates() {
           {certificates.map((certificate, index) => (
             <div
               key={index}
-              className={`relative z-10 flex w-full ${
-                index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
-              } justify-center`}
+              className={`relative z-10 flex w-full ${index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
+                } justify-center`}
             >
               <div className="hidden sm:block absolute top-1/2 left-1/2 z-20 h-5 w-5 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-4 border-yellow-800 bg-yellow-950 shadow-[0_0_0_6px_rgba(146,64,14,0.3)]"></div>
 
@@ -63,9 +62,8 @@ function Certificates() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex w-full max-w-md flex-col items-center gap-4 rounded-xl bg-zinc-900/80 border border-yellow-800/30 p-5 shadow-lg ${
-                  index % 2 === 0 ? "sm:mr-4" : "sm:ml-4"
-                }`}
+                className={`flex w-full max-w-md flex-col items-center gap-4 rounded-xl bg-zinc-900/80 border border-yellow-800/30 p-5 shadow-lg ${index % 2 === 0 ? "sm:mr-4" : "sm:ml-4"
+                  }`}
               >
                 <div
                   className="w-full overflow-hidden rounded-lg shadow-md aspect-video border-2 border-yellow-800/30 cursor-zoom-in"

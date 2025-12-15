@@ -19,7 +19,7 @@ const cardVariants = {
 };
 const Projects = () => {
   return (
-    <section className="relative  bg-zinc-950 font-['Rubik']">
+    <section className="relative pt-4 bg-zinc-950 font-['Poppins']">
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-yellow-900/20 blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-zinc-800/30 blur-3xl"></div>
@@ -31,7 +31,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4 font-['Kanit']"
+            className="text-4xl md:text-5xl font-bold text-white mb-4 font-['Poppins']"
           >
             My <span>Projects</span>
           </motion.h2>
@@ -76,7 +76,7 @@ const Projects = () => {
                 </a>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 font-['Kanit']">
+                <h3 className="text-xl font-bold text-white mb-3 font-['Poppins']">
                   {project.name}
                 </h3>
                 <p className="text-zinc-400 mb-4 text-sm leading-relaxed">
@@ -86,13 +86,12 @@ const Projects = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={`tag-${index}-${tagIndex}`}
-                      className={`text-xs font-medium px-3 py-1 rounded-full ${
-                        tag.color === "blue-text-gradient"
-                          ? "bg-blue-900/30 text-blue-300 border border-blue-800/50"
-                          : tag.color === "green-text-gradient"
+                      className={`text-xs font-medium px-3 py-1 rounded-full ${tag.color === "blue-text-gradient"
+                        ? "bg-blue-900/30 text-blue-300 border border-blue-800/50"
+                        : tag.color === "green-text-gradient"
                           ? "bg-green-900/30 text-green-300 border border-green-800/50"
                           : "bg-pink-900/30 text-pink-300 border border-pink-800/50"
-                      }`}
+                        }`}
                     >
                       {tag.name}
                     </span>
