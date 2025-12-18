@@ -54,7 +54,7 @@ const Projects = () => {
               whileInView="onscreen"
               viewport={{ once: true, margin: "-50px" }}
               variants={cardVariants}
-              className="relative group bg-white rounded-2xl overflow-hidden border border-zinc-100 hover:border-zinc-200 transition-all duration-500 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)]"
+              className="relative group bg-white border-1 border-zinc-300 rounded-2xl overflow-hidden border border-zinc-100 hover:border-zinc-200 transition-all duration-500 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)]"
             >
               <div className="h-64 overflow-hidden relative bg-zinc-50">
                 <img

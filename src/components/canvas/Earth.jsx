@@ -29,11 +29,11 @@ export default function EarthCanvas() {
 
   if (isMobile) {
     return (
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br  rounded-2xl border border-zinc-800">
+      <div className="w-90 h-60 flex items-center justify-self-center justify-center rounded-2xl border border-zinc-400">
         <div className="text-center p-6">
-          <div className="text-6xl mb-4 text-yellow-500">🌎</div>
-          <h3 className="text-xl font-bold text-white mb-2">Let's Connect</h3>
-          <p className="text-yellow-300 text-sm">
+          <div className="text-6xl mb-4 ">🌎</div>
+          <h3 className="text-xl font-bold text-zinc-700 mb-2">Let's Connect</h3>
+          <p className="text-zinc-700 text-sm">
             View on desktop for interactive 3D globe
           </p>
         </div>

@@ -45,9 +45,9 @@ export default function Navbar() {
             alt="logo"
             className="size-12 rounded-full object-cover border border-zinc-200 shadow-sm"
           />
-          <p className="text-zinc-900 font-['Poppins'] text-[18px] font-bold cursor-pointer flex items-center gap-2">
+          <p className="text-zinc-500 font-['Poppins'] text-[18px] font-bold cursor-pointer flex items-center gap-2">
             Demtse
-            <span className="lg:block hidden text-zinc-500 font-normal">| Front-end Developer</span>
+            <span className="lg:block hidden text-zinc-500 font-normal">| Web Developer</span>
           </p>
         </Link>
 

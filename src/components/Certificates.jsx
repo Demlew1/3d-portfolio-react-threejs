@@ -54,7 +54,7 @@ function Certificates() {
             <div
               key={index}
               className={`relative z-10 flex w-full ${index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
-                } justify-center`}
+                } justify-center border-1 border-zinc-300`}
             >
               {/* Timeline Dot - Clean Gray */}
               <div className="hidden sm:block absolute top-1/2 left-1/2 z-20 h-4 w-4 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[3px] border-zinc-400 bg-white"></div>

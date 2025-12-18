@@ -30,57 +30,48 @@ function Hero() {
   const subtitle = "I design and build fast, responsive, and user-friendly web applications using modern technologies like React and Tailwind CSS.";
 
   return (
-    <section className="relative w-full h-screen mx-auto my-30 sm:my-15 overflow-hidden">
+    <section className="relative w-full h-screen mx-auto overflow-hidden bg-white/0">
       {/* Content */}
       <div
-        className={`${styles.paddingX} relative z-10 max-w-7xl mx-auto h-full flex flex-col lg:flex-row items-center justify-between gap-10`}
+        className={`${styles.paddingX} relative z-10 max-w-7xl mx-auto h-full flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 pt-20`}
       >
         <motion.div
           initial="hidden"
           animate="visible"
           variants={textVariants}
-          className="max-w-2xl flex-1"
+          className="flex-1 flex flex-col justify-center gap-6 max-w-2xl"
         >
-          {/* Badge */}
-          <motion.span
-            variants={letterVariants}
-            className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 backdrop-blur"
-          >
-            Front-End / Full-Stack Developer
-          </motion.span>
+          {/* Advanced Typography Block */}
+          <div className="space-y-4">
+            {/* Minimal Intro */}
+            <div className="flex items-center gap-3">
+              <div className="h-px mt-10 w-8 bg-zinc-300"></div>
+              <p className="md:text-5xl text-2xl font-bold text-zinc-500 mt-10 uppercase tracking-[0.1em]">
+                Hi, I'm Demtse
+              </p>
+            </div>
 
 
-          {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-zinc-900 leading-tight tracking-tight text-balance">
-            {text.split("").map((char, index) => (
-              <motion.span key={index} variants={letterVariants}>
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </h1>
 
-          {/* Subtitle */}
-          <motion.p
-            variants={letterVariants}
-            className="font-[Poppins] mt-6 text-lg sm:text-xl text-zinc-500 leading-relaxed max-w-xl"
-          >
-            {subtitle.split(" ").map((word, index) => (
-              <motion.span key={index} variants={letterVariants} className="inline-block mr-1">
-                {word}
-              </motion.span>
-            ))}
-          </motion.p>
+            {/* Concise Bio */}
+            <p className="text-zinc-600 text-lg leading-relaxed font-['Poppins'] max-w-md pt-4">
+              I develop clean, user-centric web applications with <span className="text-zinc-900 font-medium">React</span> and <span className="text-zinc-900 font-medium">Next.js</span>, prioritizing performance and precision.
+            </p>
+          </div>
 
-          {/* Buttons */}
-          <motion.div
-            variants={letterVariants}
-            className="mt-8 flex flex-wrap gap-4"
-          >
+          {/* Actions */}
+          <motion.div variants={letterVariants} className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="relative px-8 py-4 rounded-xl bg-zinc-900 text-white font-medium hover:bg-zinc-800 hover:scale-105 transition-all duration-300 overflow-hidden group shadow-lg shadow-zinc-900/20"
+              className="px-8 py-3 bg-zinc-900 text-white rounded-lg font-medium hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/10 hover:shadow-xl hover:-translate-y-0.5"
             >
-              <span className="relative z-10 transition-colors">View Projects</span>
+              View Work
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-3 bg-white text-zinc-900 border border-zinc-200 rounded-lg font-medium hover:bg-zinc-50 transition-all hover:border-zinc-300"
+            >
+              Contact Me
             </a>
           </motion.div>
         </motion.div>

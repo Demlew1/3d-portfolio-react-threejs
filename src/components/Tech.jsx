@@ -29,7 +29,7 @@ const item = {
 
 function Tech() {
   return (
-    <section className="relative overflow-hidden py-20 font-['Poppins']">
+    <section className="relative overflow-hidden pt-20 font-['Poppins']">
       <div className="relative max-w-7xl mx-auto px-6 z-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -60,7 +60,7 @@ function Tech() {
                 scale: 1.02,
                 boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.05)",
               }}
-              className="group relative flex flex-col items-center p-5 bg-white rounded-xl border border-zinc-100 hover:border-zinc-300 transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col items-center p-5 bg-white rounded-xl border-1 border-zinc-200 hover:border-zinc-300 transition-all duration-300 overflow-hidden"
             >
               <div className="absolute inset-0 bg-zinc-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
