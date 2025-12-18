@@ -64,11 +64,11 @@ function Certificates() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex w-full max-w-md flex-col items-center gap-4 rounded-xl bg-white border border-zinc-100 p-6 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.12)] transition-shadow ${index % 2 === 0 ? "sm:mr-10" : "sm:ml-10"
+                className={`flex w-full max-w-md flex-col items-center gap-4 bg-white border border-zinc-100 p-6 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.12)] transition-shadow ${index % 2 === 0 ? "sm:mr-10" : "sm:ml-10"
                   }`}
               >
                 <div
-                  className="w-full overflow-hidden rounded-lg shadow-sm border border-zinc-100 cursor-zoom-in group"
+                  className="w-full overflow-hidden shadow-sm border border-zinc-100 cursor-zoom-in group"
                   onClick={() => openImage(certificate.image)}
                 >
                   <img

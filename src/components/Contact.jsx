@@ -68,7 +68,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-        <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] bg-zinc-50 rounded-2xl overflow-hidden border border-zinc-100">
+        <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]  rounded-2xl overflow-hidden border border-zinc-100">
           <EarthCanvas />
         </div>
       </div>
