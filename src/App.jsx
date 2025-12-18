@@ -17,7 +17,7 @@ export default function App() {
         {/* <div className="absolute inset-0 bg-gradient-to-br from-[#071019] via-[#0a1422] to-[#0f1b2e] animate-gradient-shift"></div> */}
 
         {/* Subtle animated grid pattern */}
-        <div className="absolute inset-0 bg-grid-pattern animate-grid-move opacity-[0.08]"></div>
+        <div className="absolute inset-0 bg-grid-pattern animate-grid-move  blur-[200px]"></div>
 
         {/* Soft glowing orbs for ambient lighting */}
 
@@ -26,8 +26,8 @@ export default function App() {
 
         {/* Circuit-line overlay — subtle metallic shine */}
         {/* Circuit-line overlay — subtle metallic shine */}
-        <div className="absolute inset-0 opacity-20 mix-blend-screen pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        <div className="absolute inset-0 opacity-15 mix-blend-screen pointer-events-none">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         </div>
 
         {/* Content section */}
