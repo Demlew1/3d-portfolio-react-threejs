@@ -8,32 +8,32 @@ function ServiceCard({ index, title, icon }) {
     <div className="xs:w-[250px]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="bg-gradient-to-br from-amber-900/30 to-pink-900/30 p-[1px] rounded-[20px] shadow-lg hover:shadow-amber-500/20 transition-shadow"
+        className="bg-white p-[1px] rounded-[20px] shadow-sm hover:shadow-md transition-shadow border border-zinc-100"
       >
         <motion.div
           whileHover={{
             y: -5,
             transition: { type: "spring", stiffness: 300 },
           }}
-          className="bg-zinc-900 border border-amber-950/50 rounded-[20px] py-5 px-12 min-h-[280px] flex flex-col justify-center items-center gap-4 hover:border-amber-600/50 transition-all"
+          className="bg-zinc-50 border border-zinc-100 rounded-[20px] py-6 px-12 min-h-[280px] flex flex-col justify-center items-center gap-6 group hover:bg-white transition-colors"
         >
           <motion.div
             whileHover={{ rotate: 10, scale: 1.1 }}
-            className="p-3 bg-zinc-800/50 rounded-full"
+            className="p-4 bg-white rounded-full shadow-sm border border-zinc-100"
           >
             <img
               src={icon}
               alt={title}
-              className="size-16 object-contain filter drop-shadow-[0_5px_15px_rgba(245,158,11,0.3)]"
+              className="size-16 object-contain"
             />
           </motion.div>
 
-          <h3 className="text-xl font-bold text-zinc-100 font-['Poppins'] mt-2">
+          <h3 className="text-xl font-bold text-zinc-900 font-['Poppins'] mt-2 text-center">
             {title}
             <motion.span
               initial={{ width: 0 }}
               whileHover={{ width: "100%" }}
-              className="block h-[2px] bg-gradient-to-r from-amber-500 to-pink-500 mt-1"
+              className="block h-[2px] bg-zinc-400 mt-2"
             />
           </h3>
         </motion.div>
@@ -46,7 +46,7 @@ function About() {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className=" ml-10 text-4xl font-['Poppins'] font-bold text-zinc-50">
+        <p className="ml-10 text-4xl font-['Poppins'] font-bold text-zinc-900">
           About me
         </p>
       </motion.div>
@@ -57,8 +57,8 @@ function About() {
           className="relative w-full max-w-md lg:max-w-sm xl:max-w-md"
         >
           <div className="relative group">
-            <div className="absolute -inset-3 border-2 border-amber-400/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative overflow-hidden rounded-lg border border-zinc-700/50 shadow-xl">
+            <div className="absolute -inset-3 border border-zinc-200 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="relative overflow-hidden rounded-lg border border-zinc-200 shadow-lg bg-white">
               <motion.img
                 src={portpic}
                 alt="Profile"
@@ -66,15 +66,12 @@ function About() {
                 initial={{ opacity: 0.9 }}
                 whileInView={{ opacity: 1 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-900/20 pointer-events-none"></div>
             </div>
-            <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-amber-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-pink-400/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         </motion.div>
         <div className="flex-1">
           <motion.p
-            className="text-gray-100 font-['Poppins'] text-lg mb-10 max-w-2xl leading-relaxed"
+            className="text-zinc-600 font-['Poppins'] text-lg mb-10 max-w-2xl leading-relaxed"
             variants={fadeIn("", "", 0.1, 1)}
           >
             I'm a front-end developer who builds websites and apps using React,

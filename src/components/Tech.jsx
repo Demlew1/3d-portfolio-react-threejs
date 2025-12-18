@@ -29,22 +29,17 @@ const item = {
 
 function Tech() {
   return (
-    <section className="relative overflow-hidden py-20  font-['Poppins']">
-      <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-zinc-800 blur-3xl"></div>
-        <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-zinc-800 blur-3xl"></div>
-      </div>
-
+    <section className="relative overflow-hidden py-20 font-['Poppins']">
       <div className="relative max-w-7xl mx-auto px-6 z-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-white mb-12 font-['Poppins']"
+          className="text-4xl md:text-5xl font-bold text-center text-zinc-900 mb-12 font-['Poppins'] tracking-tight"
         >
           <span className="inline-block">My Tech Stack</span>
-          <span className="block mt-3 text-lg font-normal text-zinc-400">
+          <span className="block mt-3 text-lg font-normal text-zinc-500">
             Tools & technologies I use daily
           </span>
         </motion.h2>
@@ -61,36 +56,36 @@ function Tech() {
               key={tech.name}
               variants={item}
               whileHover={{
-                y: -8,
-                scale: 1.03,
-                boxShadow: "0 8px 20px -5px rgba(234, 179, 8, 0.15)",
+                y: -5,
+                scale: 1.02,
+                boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.05)",
               }}
-              className="group relative flex flex-col items-center p-5 bg-zinc-900 rounded-xl border border-zinc-800 hover:border-yellow-900 transition-all duration-200 overflow-hidden"
+              className="group relative flex flex-col items-center p-5 bg-white rounded-xl border border-zinc-100 hover:border-zinc-300 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 to-zinc-800/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+              <div className="absolute inset-0 bg-zinc-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="relative z-10 w-14 h-14 mb-3 flex items-center justify-center transition-transform group-hover:scale-105">
                 <img
                   src={tech.icon}
                   alt={tech.name}
-                  className="w-full h-full object-contain"
-                  style={{ filter: "drop-shadow(0 0 6px rgba(234,179,8,0.2))" }}
+                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
                 />
               </div>
 
-              <span className="relative z-10 text-white font-medium text-center text-sm">
+              <span className="relative z-10 text-zinc-600 font-medium text-center text-sm group-hover:text-zinc-900 transition-colors">
                 {tech.name}
               </span>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Minimalist Divider */}
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent"
+          className="mt-16 h-px bg-zinc-100"
         ></motion.div>
       </div>
     </section>

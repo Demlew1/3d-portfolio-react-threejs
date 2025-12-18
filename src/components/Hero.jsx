@@ -44,25 +44,25 @@ function Hero() {
           {/* Badge */}
           <motion.span
             variants={letterVariants}
-            className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-yellow-900/30 border border-yellow-500/30 text-yellow-300 backdrop-blur"
+            className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 backdrop-blur"
           >
             Front-End / Full-Stack Developer
           </motion.span>
 
 
           {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-zinc-900 leading-tight tracking-tight text-balance">
             {text.split("").map((char, index) => (
               <motion.span key={index} variants={letterVariants}>
                 {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
           </h1>
-          <div className="absolute bottom-1/8 right-1/2 w-96 h-96 bg-yellow-700/25 rounded-full blur-[120px] animate-bounce-slow"></div>
+
           {/* Subtitle */}
           <motion.p
             variants={letterVariants}
-            className="font-[Poppins] mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed"
+            className="font-[Poppins] mt-6 text-lg sm:text-xl text-zinc-500 leading-relaxed max-w-xl"
           >
             {subtitle.split(" ").map((word, index) => (
               <motion.span key={index} variants={letterVariants} className="inline-block mr-1">
@@ -78,10 +78,9 @@ function Hero() {
           >
             <a
               href="#projects"
-              className="relative px-8 py-4 rounded-xl border-1 border-yellow-500 text-white font-bold hover:scale-105 transition-all duration-300 overflow-hidden group"
+              className="relative px-8 py-4 rounded-xl bg-zinc-900 text-white font-medium hover:bg-zinc-800 hover:scale-105 transition-all duration-300 overflow-hidden group shadow-lg shadow-zinc-900/20"
             >
-              <span className="relative z-10">View Projects</span>
-
+              <span className="relative z-10 transition-colors">View Projects</span>
             </a>
           </motion.div>
         </motion.div>

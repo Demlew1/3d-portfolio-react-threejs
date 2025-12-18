@@ -11,35 +11,21 @@ import StarCanvas from "./components/StarCanvas";
 export default function App() {
   return (
     <HashRouter>
-      <div className="min-h-screen relative overflow-hidden bg-black text-white font-['Poppins']">
-        {/* Gradient background — smoother, richer colors */}
-        {/* Gradient background — smoother, richer colors */}
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#071019] via-[#0a1422] to-[#0f1b2e] animate-gradient-shift"></div> */}
+      <div className="min-h-screen relative overflow-hidden bg-white text-zinc-900 font-['Poppins']">
 
-        {/* Subtle animated grid pattern */}
-        <div className="absolute inset-0 bg-grid-pattern animate-grid-move  blur-[200px]"></div>
-
-        {/* Soft glowing orbs for ambient lighting */}
-
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-yellow-700/25 rounded-full blur-[120px] animate-bounce-slow"></div>
-
-
-        {/* Circuit-line overlay — subtle metallic shine */}
-        {/* Circuit-line overlay — subtle metallic shine */}
-        <div className="absolute inset-0 opacity-15 mix-blend-screen pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-        </div>
+        {/* Subtle Gray Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
         {/* Content section */}
         <div className="relative z-10">
           <div
             id="hero"
-            className="bg-cover bg-no-repeat bg-center"
+            className="bg-white/0"
           >
             <Navbar />
             <Hero />
           </div>
-          <section id="about" className="pt-5">
+          <section id="about" className="">
             <About />
           </section>
           <section id="projects" className="pt-20">

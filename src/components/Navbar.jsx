@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${scrolled
-        ? "bg-[linear-gradient(to_bottom,rgba(9,9,11,0.9)_0%,rgba(9,9,11,0.7)_100%)] backdrop-blur-sm border-b border-yellow-900/20"
+        ? "bg-white/80 backdrop-blur-md border-b border-zinc-200/50 shadow-sm"
         : "bg-transparent border-transparent"
         }`}
     >
@@ -43,43 +43,48 @@ export default function Navbar() {
           <img
             src={logo}
             alt="logo"
-            className="size-12 rounded-full object-cover"
+            className="size-12 rounded-full object-cover border border-zinc-200 shadow-sm"
           />
-          <p className="text-white font-['Poppins'] text-[18px] font-bold cursor-pointer">
+          <p className="text-zinc-900 font-['Poppins'] text-[18px] font-bold cursor-pointer flex items-center gap-2">
             Demtse
-            <span className="lg:block hidden"> | Front-end Developer</span>
+            <span className="lg:block hidden text-zinc-500 font-normal">| Front-end Developer</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${active === link.title ? "text-white" : "text-gray-300"
-                } hover:text-white text-[18px] cursor-pointer font-['Poppins']`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        {/* Desktop Menu */}
+        <div className="hidden sm:flex flex-row gap-10 items-center">
+          <ul className="list-none flex flex-row gap-10">
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`${active === link.title ? "text-zinc-900 font-semibold" : "text-zinc-500"
+                  } hover:text-zinc-900 text-[16px] cursor-pointer font-['Poppins'] transition-colors duration-300`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="sm:hidden flex flex-1 justify-end items-center gap-4">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="size-[28px] object-contain cursor-pointer"
+            className="size-[28px] object-contain cursor-pointer opacity-80 hover:opacity-100 transition-opacity invert"
             onClick={() => setToggle(!toggle)}
           />
           <div
             className={`${!toggle ? "hidden" : "flex"
-              } p-6 bg-zinc-900 absolute top-20 right-4 min-w-[140px] z-10 rounded-xl border border-yellow-900/20`}
+              } p-6 bg-white absolute top-20 right-4 min-w-[140px] z-10 rounded-xl border border-zinc-200 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]`}
           >
             <ul className="list-none flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-white" : "text-gray-300"
-                    } hover:text-white text-[16px] cursor-pointer font-['Poppins']`}
+                  className={`${active === link.title ? "text-zinc-900 font-medium" : "text-zinc-500"
+                    } hover:text-zinc-900 text-[16px] cursor-pointer font-['Poppins']`}
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);
