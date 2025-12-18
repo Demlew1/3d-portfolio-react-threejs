@@ -19,7 +19,7 @@ const cardVariants = {
 };
 const Projects = () => {
   return (
-    <section className="relative pt-4 bg-zinc-950 font-['Poppins']">
+    <section className="relative pt-4  font-['Poppins']">
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-yellow-900/20 blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-zinc-800/30 blur-3xl"></div>
@@ -42,8 +42,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-lg text-zinc-400 max-w-2xl mx-auto"
           >
-            Here are some of my featured projects. Each one was built to solve
-            real problems.
+            Here are some of my featured projects.
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,7 +69,7 @@ const Projects = () => {
                   aria-label="GitHub Repository"
                 >
                   <FiGithub className="w-4 h-4 text-zinc-800 group-hover:text-zinc-900" />
-                  <span className="text-xs font-medium text-zinc-800 group-hover:text-zinc-900 hidden sm:inline">
+                  <span className="text-xs font-medium text-zinc-800 group-hover:text-zinc-900 ">
                     Live
                   </span>
                 </a>

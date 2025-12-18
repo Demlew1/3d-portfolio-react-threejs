@@ -6,6 +6,7 @@ import gdg from "./gdg.png";
 import jonasJ from "./jonasJ.jpg";
 import jonasH from "./jonasH.jpg";
 import next from "./next.jpg";
+import nextjs from "./tech/next-js.svg";
 import prof from "./prof.png";
 import portfolio from "./portfolio.png";
 import css from "./tech/css.png";
@@ -46,4 +47,5 @@ export {
   movie,
   demlew,
   demzon,
+  nextjs
 };

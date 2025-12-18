@@ -19,6 +19,7 @@ import {
   demzon,
   demlew,
   next,
+  nextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -56,6 +57,10 @@ const services = [
   {
     title: "Reactjs",
     icon: reactjs,
+  },
+  {
+    title: "Nextjs",
+    icon: nextjs,
   },
   {
     title: "tailwindcss",
@@ -145,7 +150,7 @@ const projects = [
   {
     name: "Ahadu Market",
     description:
-      "An E-commerce site that have web scraping feature directly from amazon",
+      "This is a marketplace where suppliers and buyers come together to trade. It has a built-in tool that pulls product info directly from Amazon and automatically converts the prices from dollars into Birr.",
     tags: [
       {
         name: "react",
