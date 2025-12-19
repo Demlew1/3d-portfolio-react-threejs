@@ -6,6 +6,7 @@ import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import StarCanvas from "./components/StarCanvas";
+import Feedbacks from "./components/Feedbacks";
 
 export default function App() {
   return (
@@ -32,6 +33,10 @@ export default function App() {
           </section>
           <section id="tech" className="pt-15">
             <Tech />
+          </section>
+
+          <section id="feedbacks" className="pt-5">
+            <Feedbacks />
           </section>
 
           <section id="contact" className="relative z-0 pt-15">

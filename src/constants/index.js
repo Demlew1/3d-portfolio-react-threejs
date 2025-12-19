@@ -23,7 +23,6 @@ import {
 } from "../assets";
 
 export const navLinks = [
-
   {
     id: "certificates",
     title: "Certificates",
@@ -266,4 +265,28 @@ const projects = [
   },
 ];
 
-export { certificates, services, technologies, projects };
+const testimonials = [
+  {
+    testimonial:
+      "He comes up with great UI designs. He’s not just a web developer, he is also a good friend.",
+    name: "Yohannes Aweke",
+    designation: "CEO",
+    company: "Ahadu Market",
+  },
+  {
+    testimonial:
+      "A web developer who truly cares about their client's success, just like you do",
+    name: "Yonas Debru",
+    designation: "FullStack Developer",
+    company: "Ashara Labs",
+  },
+  {
+    testimonial:
+      "I really like how dedicated he is. His UI designs are great, and he always does what you ask",
+    name: "Behigu Gizachew",
+    designation: "Software Lead",
+    company: "International Clinical Laboratory(ICL)",
+  },
+];
+
+export { certificates, services, technologies, projects, testimonials };
