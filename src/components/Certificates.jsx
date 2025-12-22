@@ -7,14 +7,17 @@ import { FaTimes } from "react-icons/fa";
 
 function Certificates() {
   const [selectedImage, setSelectedImage] = useState(null);
+
   const openImage = (image) => {
     setSelectedImage(image);
     document.body.style.overflow = "hidden";
   };
+
   const closeImage = () => {
     setSelectedImage(null);
     document.body.style.overflow = "auto";
   };
+
   return (
     <section className="relative font-['Poppins']">
       {selectedImage && (
@@ -40,32 +43,37 @@ function Certificates() {
           </div>
         </div>
       )}
+
       <motion.div variants={textVariant()} className="mb-16 text-center">
-        <h2 className={`${styles.sectionHeadText} font-['Poppins'] mt-14 text-zinc-900`}>
+        <h2
+          className={`${styles.sectionHeadText} font-['Poppins'] mt-14 text-zinc-900`}
+        >
           Certificates
         </h2>
       </motion.div>
-      <div className="relative mx-auto max-w-6xl px-4">
-        {/* Timeline Line - Minimalist Gray */}
-        <div className="hidden sm:block absolute left-1/2 top-0 h-full w-px -translate-x-1/2 transform bg-zinc-200 z-0"></div>
 
-        <div className="space-y-24">
+      <div className="relative mx-auto max-w-6xl px-4">
+        {/* Timeline Line */}
+        <div className="hidden sm:block absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-zinc-200 z-0" />
+
+        {/* FLEX ROW WRAP CONTAINER */}
+        <div className="relative z-10 flex flex-row flex-wrap justify-center gap-12">
           {certificates.map((certificate, index) => (
             <div
               key={index}
-              className={`relative z-10 flex w-full ${index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
-                } justify-center border-1 border-zinc-300 sm:border-none`}
+              className="flex justify-center w-full sm:w-[calc(50%-3rem)]"
             >
-              {/* Timeline Dot - Clean Gray */}
-              <div className="hidden sm:block absolute top-1/2 left-1/2 z-20 h-4 w-4 -translate-y-1/2 -translate-x-1/2 transform rounded-full border-[3px] border-zinc-400 bg-white"></div>
-
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex w-full max-w-md flex-col items-center gap-4 bg-white border border-zinc-100 p-6 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.12)] transition-shadow ${index % 2 === 0 ? "sm:mr-10" : "sm:ml-10"
-                  }`}
+                className={`flex w-full max-w-sm flex-col items-center gap-4
+                bg-white border border-zinc-100 p-6
+                shadow-[0_5px_30px_-15px_rgba(0,0,0,0.08)]
+                hover:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.12)]
+                transition-shadow
+                ${index % 2 === 0 ? "sm:mr-10" : "sm:ml-10"}`}
               >
                 <div
                   className="w-full overflow-hidden shadow-sm border border-zinc-100 cursor-zoom-in group"
@@ -74,9 +82,13 @@ function Certificates() {
                   <img
                     src={certificate.image}
                     alt={certificate.name}
-                    className="h-full w-full object-cover opacity-90 group-hover:opacity-100 md:group-hover:scale-105 md:transition-transform md:duration-500"
+                    className="h-full w-full object-cover opacity-90
+                    group-hover:opacity-100
+                    md:group-hover:scale-105
+                    md:transition-transform md:duration-500"
                   />
                 </div>
+
                 <div className="w-full text-center space-y-2">
                   <h3 className="font-['Kanit'] text-xl font-bold text-zinc-900 tracking-tight">
                     {certificate.name}

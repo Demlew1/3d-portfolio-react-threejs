@@ -34,7 +34,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-zinc-900 mb-4 font-['Poppins'] tracking-tight"
           >
-            My <span className="text-zinc-500">Projects</span>
+            Sample <span className="text-zinc-500">Portfolios</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-lg text-zinc-500 max-w-2xl mx-auto"
           >
-            Here are some of my featured projects.
+            Here are some of my sample works.
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
