@@ -55,7 +55,7 @@ function Hero() {
 
             {/* Concise Bio */}
             <p className="text-zinc-600 text-lg leading-relaxed font-['Poppins'] max-w-md pt-4">
-              I develop clean, user-centric web applications with <span className="text-zinc-900 font-medium">React</span> and <span className="text-zinc-900 font-medium">Next.js</span>, prioritizing performance and precision.
+              Do you want a clean, fast website built with <span className="text-zinc-900 font-medium">React</span> and <span className="text-zinc-900 font-medium">Next.js? </span>You are in the right place.
             </p>
           </div>
 
