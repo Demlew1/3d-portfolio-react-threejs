@@ -286,7 +286,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I really like how dedicated he is. His UI designs are great, and he always does what you ask",
+      "Demtse is quick to understand requirements and deliver what needs to be done. He translates ideas into working solutions fast, with minimal supervision and solid execution.",
     name: "Behigu Gizachew",
     designation: "Software Lead",
     company: "International Clinical Laboratory(ICL)",

@@ -26,7 +26,9 @@ const FeedbackCard = ({
         <p className="text-zinc-900 font-black text-[48px]">"</p>
 
         <div className="mt-1">
-            <p className="text-zinc-600 tracking-wider text-[18px]">{testimonial}</p>
+            <p className="text-zinc-600 tracking-wider text-[18px]">
+                {testimonial}
+            </p>
 
             <div className="mt-7 flex justify-between items-center gap-1">
                 <div className="flex-1 flex flex-col">
@@ -45,22 +47,32 @@ const FeedbackCard = ({
 const Feedbacks = () => {
     return (
         <div className="mt-12 bg-white rounded-[20px] font-['Poppins']">
-            <div
-                className={`${styles.paddingX} bg-white rounded-2xl min-h-[300px]`}
-            >
+            <div className={`${styles.paddingX} bg-white rounded-2xl min-h-[300px]`}>
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                 >
-                    <p className={`${styles.sectionSubText} text-zinc-500 text-lg uppercase tracking-wider`}>What others say</p>
-                    <h2 className={`${styles.sectionHeadText} text-zinc-900`}>Testimonials.</h2>
+                    <p className={`${styles.sectionSubText} text-zinc-500 text-lg uppercase tracking-wider`}>
+                        What others say
+                    </p>
+                    <h2 className={`${styles.sectionHeadText} text-zinc-900`}>
+                        Testimonials.
+                    </h2>
                 </motion.div>
             </div>
-            <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 justify-center`}>
+
+            {/* ✅ FIX HERE: items-start */}
+            <div
+                className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 justify-center items-start`}
+            >
                 {testimonials.map((testimonial, index) => (
-                    <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+                    <FeedbackCard
+                        key={testimonial.name}
+                        index={index}
+                        {...testimonial}
+                    />
                 ))}
             </div>
         </div>
